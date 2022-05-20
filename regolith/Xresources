@@ -1,2 +1,37 @@
 ! -- This points to the default looks Xresource root file.
 #include "/etc/regolith/styles/lascaille/root"
+
+! -- mod を alt キーに割当
+i3-wm.mod: Mod1
+i3-wm.alt: Mod4
+
+! -- mod/alt 入れ替えによるエラーを修正
+i3-wm.binding.file_search: Mod4+space
+i3-wm.binding.take_next_free: Mod4+grave
+i3-wm.binding.kill_app: Mod4+q
+i3-wm.binding.ws_next2: Mod4+Right
+i3-wm.binding.ws_prev2: Mod4+Left
+
+! -- dvorak 用の設定
+
+i3-wm.binding.left: d
+i3-wm.binding.right: n
+i3-wm.binding.up: h
+i3-wm.binding.down: t
+
+i3-wm.binding.move_left: Shift+d
+i3-wm.binding.move_right: Shift+n
+i3-wm.binding.move_up: Shift+h
+i3-wm.binding.move_down: Shift+t
+
+i3-wm.binding.take_left: Ctrl+Shift+d
+i3-wm.binding.take_right: Ctrl+Shift+n
+i3-wm.binding.take_up: Ctrl+Shift+h
+i3-wm.binding.take_down: Ctrl+Shift+t
+
+! -- dvorak のキーを入れたことによる衝突回避
+i3-wm.binding.focus_toggle: Shift+k
+i3-wm.binding.layout_mode: k
+i3-wm.binding.display: p
+i3-wm.binding.files: Shift+z
+i3-wm.binding.notification_ui: o
