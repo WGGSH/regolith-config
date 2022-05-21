@@ -16,18 +16,18 @@ i3-wm.binding.ws_prev2: Mod4+Left
 
 i3-wm.binding.left: d
 i3-wm.binding.right: n
-i3-wm.binding.up: h
-i3-wm.binding.down: t
+i3-wm.binding.up: t
+i3-wm.binding.down: h
 
 i3-wm.binding.move_left: Shift+d
 i3-wm.binding.move_right: Shift+n
-i3-wm.binding.move_up: Shift+h
-i3-wm.binding.move_down: Shift+t
+i3-wm.binding.move_up: Shift+t
+i3-wm.binding.move_down: Shift+h
 
 i3-wm.binding.take_left: Ctrl+Shift+d
 i3-wm.binding.take_right: Ctrl+Shift+n
-i3-wm.binding.take_up: Ctrl+Shift+h
-i3-wm.binding.take_down: Ctrl+Shift+t
+i3-wm.binding.take_up: Ctrl+Shift+t
+i3-wm.binding.take_down: Ctrl+Shift+h
 
 ! -- dvorak のキーを入れたことによる衝突回避
 i3-wm.binding.focus_toggle: Shift+k
@@ -35,3 +35,37 @@ i3-wm.binding.layout_mode: k
 i3-wm.binding.display: p
 i3-wm.binding.files: Shift+z
 i3-wm.binding.notification_ui: o
+i3-wm.binding.files: e
+
+! -- 標準プログラムの指定
+i3-wm.program.terminal: exec /usr/bin/alacritty
+rofi.theme: /etc/regolith/styles/lascaille/rofi.rasi
+i3-wm.program.launcher.app: rofi -show drun -theme $(xrescat rofi.theme)
+i3-wm.program.launcher.cmd: rofi -show run -theme $(xrescat rofi.theme)
+i3-wm.program.launcher.window: rofi -show window -theme $(xrescat rofi.theme)
+i3-wm.program.help: /usr/bin/remontoire-toggle
+i3-wm.program.file:_search rofi -show find -modi find:/usr/share/rofi/modi/finder.sh -theme $(xrescat rofi.theme)
+i3-wm.program.look_selector: rofi -show look -modi look:/usr/share/rofi/modi/look-selector.sh -theme $(xrescat rofi.theme)
+i3-wm.program.refresh_ui: /usr/bin/regolith-look refresh
+i3-wm.program.logout: /usr/bin/gnome-session-quit --logout
+i3-wm.program.reboot: /usr/bin/gnome-session-quit --reboot
+i3-wm.program.shutdown: /usr/bin/gnome-session-quit --power-off
+i3-wm.program.lock: dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
+i3-wm.program.sleep: systemctl suspend
+i3-wm.program.settings: gnome-control-center
+i3-wm.program.display: gnome-control-center display
+i3-wm.program.wifi: gnome-control-center wifi
+i3-wm.program.bluetooth: gnome-control-center bluetooth
+i3-wm.program.sound: gnome-control-center sound
+i3-wm.program.files: /usr/bin/nautilus
+i3-wm.program.notification_ui: /usr/bin/rofication-gui
+
+! -- i3 Bar
+i3-wm.bar.position: bottom
+i3-wm.bar.font: pango:HackGenNerd 16
+i3-wm.bar.separator: "/"
+i3-wm.trayrayout: primary
+i3-wm.bar.stripworkspacenumbers: yes
+i3-wm.bar.mode: dock
+i3-wm.program.compositor: /usr/share/regolith/compositor/init
+i3-wm.program.notifications: /usr/bin/rofication-deamon
