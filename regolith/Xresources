@@ -1,5 +1,5 @@
 ! -- This points to the default looks Xresource root file.
-#include "/etc/regolith/styles/lascaille/root"
+#include "/etc/regolith/styles/custom/root"
 
 ! -- mod を alt キーに割当
 i3-wm.mod: Mod1
@@ -39,7 +39,7 @@ i3-wm.binding.files: e
 
 ! -- 標準プログラムの指定
 i3-wm.program.terminal: exec /usr/bin/alacritty
-rofi.theme: /etc/regolith/styles/lascaille/rofi.rasi
+rofi.theme: /etc/regolith/styles/custom/rofi.rasi
 i3-wm.program.launcher.app: rofi -show drun -theme $(xrescat rofi.theme)
 i3-wm.program.launcher.cmd: rofi -show run -theme $(xrescat rofi.theme)
 i3-wm.program.launcher.window: rofi -show window -theme $(xrescat rofi.theme)
@@ -64,7 +64,7 @@ i3-wm.program.notification_ui: /usr/bin/rofication-gui
 i3-wm.bar.position: bottom
 i3-wm.bar.font: pango:HackGenNerd 16
 i3-wm.bar.separator: "/"
-i3-wm.trayrayout: primary
+i3-wm.trayoutput: primary
 i3-wm.bar.stripworkspacenumbers: yes
 i3-wm.bar.mode: dock
 
@@ -72,6 +72,11 @@ i3-wm.bar.mode: dock
 i3-wm.program.compositor: /usr/bin/picom --config ~/.config/regolith/picom/config
 i3-wm.program.notifications: /usr/bin/rofication-daemon
 
-! -- gaps
+! -- i3 gaps
+i3-wm.window.border.size: 5
+i3-wm.floatingwindow.border.size: 5
 i3-wm.gaps.inner.size: 30
-i3-wm.gaps.outer.size: 10
+i3-wm.gaps.outer.size: -20
+
+! -- appearance
+i3-wm.font pango:HackGenNerd 13
