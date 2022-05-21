@@ -67,5 +67,11 @@ i3-wm.bar.separator: "/"
 i3-wm.trayrayout: primary
 i3-wm.bar.stripworkspacenumbers: yes
 i3-wm.bar.mode: dock
-i3-wm.program.compositor: /usr/share/regolith/compositor/init
-i3-wm.program.notifications: /usr/bin/rofication-deamon
+
+! -- 起動時のプログラム
+i3-wm.program.compositor: /usr/bin/picom --config ~/.config/regolith/picom/config
+i3-wm.program.notifications: /usr/bin/rofication-daemon
+
+! -- gaps
+i3-wm.gaps.inner.size: 30
+i3-wm.gaps.outer.size: 10
