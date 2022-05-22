@@ -73,8 +73,8 @@ i3-wm.program.compositor: /usr/bin/picom --config ~/.config/regolith/picom/confi
 i3-wm.program.notifications: /usr/bin/rofication-daemon
 
 ! -- i3 gaps
-i3-wm.window.border.size: 5
-i3-wm.floatingwindow.border.size: 5
+i3-wm.window.border.size: 3
+i3-wm.floatingwindow.border.size: 3
 i3-wm.gaps.inner.size: 30
 i3-wm.gaps.outer.size: -20
 

@@ -57,7 +57,7 @@ shadow = true;
 # The blur radius for shadows. (default 12)
 shadow-radius = 8;
 # The left offset for shadows. (default -15)
-shadow-offset-x = -25;
+shadow-offset-x = -15;
 # The top offset for shadows. (default -15)
 shadow-offset-y = -15;
 # The translucency for shadows. (default .75)
@@ -106,6 +106,12 @@ inactive-opacity = .95;
 active-opacity = .95;
 frame-opacity = 1;
 inactive-opacity-override = false;
+
+opacity-rule = [
+  "100:name *= 'Edge'",
+  "90:name *= 'Term'",
+  "90:name *= 'Hyper'",
+]
 
 # Dim inactive windows. (0.0 - 1.0)
 inactive-dim = 0.03;
@@ -221,6 +227,9 @@ wintypes:
         opacity = 1.0; 
         shadow = false;
         fade = false;
+    }
+    menu = {
+      shadow = false;
     }
     dropdown_menu = { 
         opacity = 1.0; 
