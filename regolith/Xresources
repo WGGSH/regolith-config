@@ -40,17 +40,17 @@ i3-wm.binding.files: e
 ! -- 標準プログラムの指定
 i3-wm.program.terminal: exec /usr/bin/alacritty
 rofi.theme: /etc/regolith/styles/custom/rofi.rasi
-i3-wm.program.launcher.app: rofi -show drun -theme $(xrescat rofi.theme)
-i3-wm.program.launcher.cmd: rofi -show run -theme $(xrescat rofi.theme)
-i3-wm.program.launcher.window: rofi -show window -theme $(xrescat rofi.theme)
+i3-wm.program.launcher.app: rofi -show drun -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
+i3-wm.program.launcher.cmd: rofi -show run -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
+i3-wm.program.launcher.window: rofi -show window -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
 i3-wm.program.help: /usr/bin/remontoire-toggle
-i3-wm.program.file:_search rofi -show find -modi find:/usr/share/rofi/modi/finder.sh -theme $(xrescat rofi.theme)
-i3-wm.program.look_selector: rofi -show look -modi look:/usr/share/rofi/modi/look-selector.sh -theme $(xrescat rofi.theme)
+i3-wm.program.file:_search rofi -show find -modi find:/usr/share/rofi/modi/finder.sh -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
+i3-wm.program.look_selector: rofi -show look -modi look:/usr/share/rofi/modi/look-selector.sh -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
 i3-wm.program.refresh_ui: /usr/bin/regolith-look refresh
 i3-wm.program.logout: /usr/bin/gnome-session-quit --logout
 i3-wm.program.reboot: /usr/bin/gnome-session-quit --reboot
 i3-wm.program.shutdown: /usr/bin/gnome-session-quit --power-off
-i3-wm.program.lock: dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
+i3-wm.program.lock: /usr/bin/i3lock-fancy-multimonitor -b=0x8 -n
 i3-wm.program.sleep: systemctl suspend
 i3-wm.program.settings: gnome-control-center
 i3-wm.program.display: gnome-control-center display

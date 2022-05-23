@@ -109,8 +109,8 @@ inactive-opacity-override = false;
 
 opacity-rule = [
   "100:name *= 'Edge'",
-  "90:name *= 'Term'",
-  "90:name *= 'Hyper'",
+  "95:name *= 'Term'",
+  "95:name *= 'Hyper'",
 ]
 
 # Dim inactive windows. (0.0 - 1.0)
