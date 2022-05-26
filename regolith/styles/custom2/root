@@ -1,0 +1,20 @@
+regolith.look: custom2
+
+! -- Styles - Colors
+#include "/etc/regolith/styles/custom2/color"
+
+! -- Styles - Fonts
+#include "/etc/regolith/styles/custom2/typeface"
+
+! -- Styles - Theme
+#include "/etc/regolith/styles/custom2/theme"
+#include "/etc/regolith/styles/custom2/ignore"
+
+! -- Applications
+! These files map values defined above into specific app settings.
+#include "/etc/regolith/styles/custom2/st-term"
+#include "/etc/regolith/styles/custom2/i3-wm"
+#include "/etc/regolith/styles/i3xrocks"
+#include "/etc/regolith/styles/rofi"
+#include "/etc/regolith/styles/gnome"
+

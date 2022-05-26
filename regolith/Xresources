@@ -1,5 +1,5 @@
 ! -- This points to the default looks Xresource root file.
-#include "/etc/regolith/styles/custom/root"
+#include "/etc/regolith/styles/custom2/root"
 
 ! -- mod を alt キーに割当
 i3-wm.mod: Mod1
@@ -39,7 +39,7 @@ i3-wm.binding.files: e
 
 ! -- 標準プログラムの指定
 i3-wm.program.terminal: exec /usr/bin/alacritty
-rofi.theme: /etc/regolith/styles/custom/rofi.rasi
+rofi.theme: /etc/regolith/styles/custom2/rofi.rasi
 i3-wm.program.launcher.app: rofi -show drun -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
 i3-wm.program.launcher.cmd: rofi -show run -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
 i3-wm.program.launcher.window: rofi -show window -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
