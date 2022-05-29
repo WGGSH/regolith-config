@@ -402,9 +402,9 @@ set_from_resource $i3-wm.program.lock i3-wm.program.lock dbus-send --type=method
 bindsym $mod+$i3-wm.binding.lock exec $i3-wm.program.lock
 
 ## Session // Sleep // <><Shift> s ##
-set_from_resource $i3-wm.binding.sleep i3-wm.binding.sleep Shift+s
-set_from_resource $i3-wm.program.sleep i3-wm.program.sleep systemctl suspend
-bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
+# set_from_resource $i3-wm.binding.sleep i3-wm.binding.sleep Shift+s
+# set_from_resource $i3-wm.program.sleep i3-wm.program.sleep systemctl suspend
+# bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
 
 ###############################################################################
 # System Management
@@ -444,6 +444,12 @@ bindsym $mod+$i3-wm.binding.files exec $i3-wm.program.files
 set_from_resource $i3-wm.binding.notification_ui i3-wm.binding.notification_ui n
 set_from_resource $i3-wm.program.notification_ui i3-wm.program.notification_ui /usr/bin/rofication-gui
 bindsym $mod+$i3-wm.binding.notification_ui exec $i3-wm.program.notification_ui
+
+## Launch // Screen Shot // <> + shift + s ##
+set_from_resource $i3-wm.binding.screenshot i3-wm.binding.screenshot Shift+s
+set_from_resource $i3-wm.program.screenshot i3-wm.program.screenshot /usr/bin/gnome-screenshot
+bindsym $mod+$i3-wm.binding.screenshot exec $i3-wm.program.screenshot
+
 
 ###############################################################################
 # Workspace Management

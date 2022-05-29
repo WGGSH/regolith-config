@@ -59,6 +59,7 @@ i3-wm.program.bluetooth: gnome-control-center bluetooth
 i3-wm.program.sound: gnome-control-center sound
 i3-wm.program.files: /usr/bin/nautilus
 i3-wm.program.notification_ui: /usr/bin/rofication-gui
+i3-wm.program.screenshot: /usr/bin/gnome-screenshot -ac
 
 ! -- i3 Bar
 i3-wm.bar.position: bottom
