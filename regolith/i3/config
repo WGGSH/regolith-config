@@ -682,3 +682,7 @@ exec --no-startup-id $i3-wm.program.3
 # background
 set_from_resource $i3-wm.program.wallpaper i3-wm.program.wallpaper ~/.fehbg
 exec --no-startup-id exec $i3-wm.program.wallpaper
+
+# update
+set_from_resource $i3-wm.program.updaate i3-wm.program.update /usr/bin/arch-audit-gtk
+exec --no-startup-id $i3-wm.program.update

@@ -71,6 +71,7 @@ i3-wm.bar.mode: dock
 ! -- 起動時のプログラム
 i3-wm.program.compositor: /usr/bin/picom --config ~/.config/regolith/picom/config
 i3-wm.program.notifications: /usr/bin/rofication-daemon
+i3-wm.program.update: /usr/bin/arch-audit-gtk
 
 ! -- i3 gaps
 i3-wm.window.border.size: 3
