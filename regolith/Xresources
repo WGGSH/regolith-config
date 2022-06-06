@@ -1,5 +1,6 @@
 ! -- This points to the default looks Xresource root file.
-#include "/etc/regolith/styles/custom2/root"
+#include "/etc/regolith/styles/onedark/root"
+#include "./Xresources-ignore"
 
 ! -- mod を alt キーに割当
 i3-wm.mod: Mod1
@@ -39,7 +40,7 @@ i3-wm.binding.files: e
 
 ! -- 標準プログラムの指定
 i3-wm.program.terminal: exec /usr/bin/alacritty
-rofi.theme: /etc/regolith/styles/custom2/rofi.rasi
+rofi.theme: /etc/regolith/styles/onedark/rofi.rasi
 i3-wm.program.launcher.app: rofi -show drun -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
 i3-wm.program.launcher.cmd: rofi -show run -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
 i3-wm.program.launcher.window: rofi -show window -theme $(xrescat rofi.theme) -font "$(xrescat rofi.font)" -show-icons
@@ -73,6 +74,8 @@ i3-wm.bar.mode: dock
 i3-wm.program.compositor: /usr/bin/picom --config ~/.config/regolith/picom/config
 i3-wm.program.notifications: /usr/bin/rofication-daemon
 i3-wm.program.update: /usr/bin/arch-audit-gtk
+i3-wm.program.polybar: ~/.config/polybar/launch.sh
+i3-wm.program.wallpaper: /usr/bin/nitrogen --restore
 
 ! -- i3 gaps
 i3-wm.window.border.size: 3
@@ -82,3 +85,13 @@ i3-wm.gaps.outer.size: -20
 
 ! -- appearance
 i3-wm.font pango:HackGenNerd 13
+
+! -- workspaces
+i3-wm.workspace.01.name: 1
+i3-wm.workspace.02.name: 2
+i3-wm.workspace.03.name: 3
+i3-wm.workspace.04.name: 4
+i3-wm.workspace.05.name: 5
+i3-wm.workspace.06.name: 6
+
+i3-wm.workspace.01.output:
