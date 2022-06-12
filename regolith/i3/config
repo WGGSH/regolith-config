@@ -696,3 +696,11 @@ exec --no-startup-id $i3-wm.program.update
 # polybar
 set_from_resource $i3-wm.program.polybar i3-wm.program.polybar /usr/bin/polybar
 exec --no-startup-id $i3-wm.program.polybar
+
+# assign workspaces
+set_from_resource $i3-wm.workspace.01.output i3-wm.workspace.01.output
+workspace 1 output $i3-wm.workspace.01.output
+set_from_resource $i3-wm.workspace.02.output i3-wm.workspace.02.output
+workspace 2 output $i3-wm.workspace.02.output
+set_from_resource $i3-wm.workspace.03.output i3-wm.workspace.03.output
+workspace 3 output $i3-wm.workspace.03.output
