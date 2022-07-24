@@ -76,12 +76,13 @@ i3-wm.program.notifications: /usr/bin/rofication-daemon
 i3-wm.program.update: /usr/bin/arch-audit-gtk
 i3-wm.program.polybar: ~/.config/polybar/launch.sh
 i3-wm.program.wallpaper: /usr/bin/nitrogen --restore
+i3-wm.program.xcape: /usr/bin/xcape -e  "Caps_Lock=Escape"
 
 ! -- i3 gaps
-i3-wm.window.border.size: 3
-i3-wm.floatingwindow.border.size: 3
-i3-wm.gaps.inner.size: 30
-i3-wm.gaps.outer.size: -20
+i3-wm.window.border.size: 5
+i3-wm.floatingwindow.border.size: 0
+i3-wm.gaps.inner.size: 40
+i3-wm.gaps.outer.size: 20
 
 ! -- appearance
 i3-wm.font pango:HackGenNerd 13
